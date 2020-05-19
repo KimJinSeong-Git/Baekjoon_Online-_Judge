@@ -21,6 +21,7 @@ public class no5543_SangGeunald {
         int nb_Drink = 2;
         int nb_Set = nb_Burger * nb_Drink;
         int set_Count = 0;
+        int min_Price;
 
         int[] b_Price = new int[nb_Burger];
         int[] d_Price = new int[nb_Drink];
@@ -39,5 +40,14 @@ public class no5543_SangGeunald {
                 set_Count++;
             }
         }
+
+        min_Price = set_Price[0];
+        for(int i=0; i<nb_Set; i++){
+            if(min_Price>set_Price[i])
+                min_Price = set_Price[i];
+        }
+        System.out.println(min_Price);
+
+        scanner.close();
     }
 }
