@@ -12,6 +12,7 @@
  - 첫째 줄에 가장 싼 세트 메뉴의 가격을 출력한다.
 */
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class no5543_SangGeunald {
     public static void main(String[] args){
@@ -19,13 +20,10 @@ public class no5543_SangGeunald {
 
         int nb_Burger = 3;
         int nb_Drink = 2;
-        int nb_Set = nb_Burger * nb_Drink;
-        int set_Count = 0;
         int min_Price;
 
         int[] b_Price = new int[nb_Burger];
         int[] d_Price = new int[nb_Drink];
-        int[] set_Price = new int[nb_Set];
 
         for(int i=0; i<nb_Burger; i++){
             b_Price[i] = scanner.nextInt();
@@ -33,21 +31,10 @@ public class no5543_SangGeunald {
         for(int i=0; i<nb_Drink; i++){
             d_Price[i] = scanner.nextInt();
         }
+        Arrays.sort(b_Price);
+        Arrays.sort(d_Price);
+        min_Price = b_Price[0] + d_Price[0] - 50;
 
-        for(int i=0; i<nb_Burger; i++){
-            for(int j=0; j<nb_Drink; j++){
-                set_Price[set_Count] = b_Price[i] + d_Price[j] - 50;
-                set_Count++;
-            }
-        }
-
-        min_Price = set_Price[0];
-        for(int i=0; i<nb_Set; i++){
-            if(min_Price>set_Price[i])
-                min_Price = set_Price[i];
-        }
         System.out.println(min_Price);
-
-        scanner.close();
     }
 }
