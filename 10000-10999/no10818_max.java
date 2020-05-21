@@ -10,30 +10,20 @@
 */
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class no10818_max {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        int max = 0, min = 0;
         int n = scanner.nextInt();
         int[] n_Array = new int[n];
 
         for(int i=0; i<n; i++){
             n_Array[i] = scanner.nextInt();
-            if(i==0){
-                max = n_Array[i];
-                min = n_Array[i];
-            }
-            else{
-                if(max < n_Array[i])
-                    max = n_Array[i];
-                if(min > n_Array[i])
-                    min = n_Array[i];
-            }
         }
 
-        System.out.println(min + " " + max);
-        scanner.close();
+        Arrays.sort(n_Array);
+        System.out.println(n_Array[0] + " " + n_Array[n-1]);
     }
 }
