@@ -26,5 +26,6 @@ public class no2523_star13 {
 
             System.out.println("*".repeat(nb_Star));
         }
+        scanner.close();
     }
 }
