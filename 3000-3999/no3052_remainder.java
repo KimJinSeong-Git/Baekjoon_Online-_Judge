@@ -11,22 +11,17 @@
 */
 
 import java.util.Scanner;
+import java.util.HashSet;
+import java.util.Set;
 
 public class no3052_remainder {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int[] n = new int[42];
-        int temp;
-        int nb_n = 0;
+        Set<Integer> set = new HashSet<>();
 
         for(int i=0; i<10; i++){
-            temp = sc.nextInt() % 42;
-            if(n[temp] == 0)
-                nb_n++;
-            n[temp]++;
+            set.add(sc.nextInt()%42);
         }
-
-        System.out.println(nb_n);
-        sc.close();
+        System.out.println(set.size());
     }
 }
