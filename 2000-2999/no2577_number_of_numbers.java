@@ -13,38 +13,19 @@
 */
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class no2577_number_of_numbers {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int result = sc.nextInt() * sc.nextInt() * sc.nextInt();
         int[] nb_nbs = new int[10];
-        //String str = String.valueOf(result);
-        char[] ch = ("" + result).toCharArray();
-        
-        for(int i=0; i<ch.length; i++){
-            if(ch[i] == '0')
-                nb_nbs[0]++;
-            else if(ch[i] == '1')
-                nb_nbs[1]++;
-            else if(ch[i] == '2')
-                nb_nbs[2]++;
-            else if(ch[i] == '3')
-                nb_nbs[3]++;
-            else if(ch[i] == '4')
-                nb_nbs[4]++;
-            else if(ch[i] == '5')
-                nb_nbs[5]++;
-            else if(ch[i] == '6')
-                nb_nbs[6]++;
-            else if(ch[i] == '7')
-                nb_nbs[7]++;
-            else if(ch[i] == '8')
-                nb_nbs[8]++;
-            else if(ch[i] == '9')
-                nb_nbs[9]++;
+        sc.close();
+
+        while(result>0){
+            nb_nbs[result%10]++;
+            result = result/10;
         }
+
         for(int i=0; i<10; i++){
             System.out.println(nb_nbs[i]);
         }
