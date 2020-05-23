@@ -1,5 +1,6 @@
 ## Baekjoon Online Judge Practice
 ### May Log
+* [JAVA] 1,546 - 평균
 * [JAVA] 2,523 - 별찍기_13
 * [JAVA] 2,562 - 최대값 찾기
 * [JAVA] 2,577 - 숫자의 개수
