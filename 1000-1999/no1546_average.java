@@ -29,7 +29,6 @@ public class no1546_average {
 
         for(int i=0; i<nb_class; i++){
             average = average + (score[i] / max * 100);
-            System.out.println(i + "test : " + average);
         }
 
         System.out.println(average / nb_class);
