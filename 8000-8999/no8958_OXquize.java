@@ -16,27 +16,35 @@ import java.util.Scanner;
 public class no8958_OXquize {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-
-        int nb_result = sc.nextInt();
-        String[] result = new String[nb_result];
         
-        int local_score;
-        int score;
+        int nb_result = sc.nextInt();
+        String[] result_test = new String[nb_result];
+        int[] score = new int [nb_result];
+
+        sc.nextLine();
 
         for(int i=0; i<nb_result; i++){
-            score = 0;
-            local_score = 0;
-
-            result[i] = sc.nextLine();
-
-            for(int j=0; j<nb_result; j++){
-                if(result[i].charAt(j) == 'O')
-                    local_score++;
-                else
-                    local_score = 0;
-                score = score + local_score;
-            }
-            System.out.println(score);
+            result_test[i] = sc.nextLine();
+            score[i] = MyScore(result_test[i]);
         }
+
+        for(int i = 0; i<nb_result; i++){
+            System.out.println(score[i]);
+        }
+    }
+
+    public static int MyScore(String test){
+        int total = 0;
+        int score = 0;
+        
+        for(int i = 0; i<test.length(); i++){
+            if(test.charAt(i) == 'O')
+                score++;
+            else   
+                score = 0;
+            
+            total += score;
+        }
+        return total;
     }
 }
