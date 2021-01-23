@@ -17,7 +17,6 @@ public class no11720_sum{
         int nb_num = sc.nextInt();
         sc.nextLine();
         String num = sc.nextLine();
-        System.out.println("입력완");
 
         System.out.println(Sum(nb_num, num));
     }
@@ -26,7 +25,6 @@ public class no11720_sum{
         int sum = 0;
 
         for(int i=0; i<nb_num; i++){
-            System.out.println(i + " num = " + ((int)num.charAt(i)-48));
             sum += (int)num.charAt(i)-48;
         }
 
