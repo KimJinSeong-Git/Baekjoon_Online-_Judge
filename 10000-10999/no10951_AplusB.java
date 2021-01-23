@@ -16,10 +16,10 @@ public class no10951_AplusB {
         Scanner sc = new Scanner(System.in);
 
         int num1, num2;
-        while(true){
+        while(sc.hasNextInt()){
             num1 = sc.nextInt();
             num2 = sc.nextInt();
-            System.out.println(num1+num2);    
+            System.out.println(num1 + num2);    
         }
     }
 }
