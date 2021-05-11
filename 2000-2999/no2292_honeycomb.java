@@ -21,21 +21,6 @@ public class no2292_honeycomb {
 
         System.out.println(layer);
 
-        /*
-        int i=1;
-        int cnt=1;
-
-        while(true){
-            System.out.println(i + " Layer's Number of Rooms : " + NumberOfRooms(i));
-            System.out.print("Number List : ");
-            for(int j=1; j<=NumberOfRooms(i); j++){
-                System.out.print(cnt + " ");
-                cnt++;
-            }
-            i++;
-            sc.nextLine();
-        }
-        */
     }       
 
     public static int WhatLayer(int room_number){
