@@ -32,7 +32,7 @@ public class no13604_strategy_game{
         }
 
         for(int i=0; i<nPlayers; i++){
-            if(score[bestPlayer]<score[i])
+            if(score[bestPlayer]<=score[i])
                 bestPlayer = i;
         }
         System.out.println(bestPlayer+1);
