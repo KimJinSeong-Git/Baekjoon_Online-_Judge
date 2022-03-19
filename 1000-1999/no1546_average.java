@@ -32,5 +32,7 @@ public class no1546_average {
         }
 
         System.out.println(average / nb_class);
+        sc.close();
+
     }
 }

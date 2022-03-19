@@ -28,6 +28,8 @@ public class no1157_studying_vocabulary{
             System.out.println((char)result);
         else
             System.out.println('?');
+        sc.close();
+
     }
 
     public static int HowManyAlphabet(String word, int order){

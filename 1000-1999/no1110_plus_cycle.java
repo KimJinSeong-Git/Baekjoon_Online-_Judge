@@ -33,5 +33,7 @@ public class no1110_plus_cycle{
         if(Number == 0)
             cnt++;
         System.out.println(cnt);
+        sc.close();
+
     }
 }

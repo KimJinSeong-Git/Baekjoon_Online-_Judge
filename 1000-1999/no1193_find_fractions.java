@@ -36,6 +36,8 @@ public class no1193_find_fractions {
         den = FindDen(n, seq);
 
         System.out.println(num + "/" + den);
+        sc.close();
+
     }
     
     public static int FindNum(int n, int seq){   

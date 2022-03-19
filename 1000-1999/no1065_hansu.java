@@ -23,6 +23,7 @@ public class no1065_hansu {
         }
 
         System.out.println(cnt);
+        sc.close();
     }
 
     public static boolean IsHansu(int num){
