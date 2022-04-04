@@ -32,26 +32,39 @@ public class no1018_chess {
         int col = sc.nextInt();
         String temp;
         char[][] chessBoard = new char[row][col];
-        /*
+
         for(int i=0; i<row; i++){
             temp = sc.next();
             for(int j=0; j<col; j++){
                 chessBoard[i][j] = temp.charAt(j);
             }
         }
-        */
-        int count=0;
+
+        int count;
+        char evenColor;
+        int minCount = 100;
         for(int r=0; r<row-7; r++){
             for(int c=0; c<col-7; c++){
                 // 시작점 선택 완료
+                evenColor=chessBoard[r][c];
+                count=0;
                 for(int i=r; i<r+8; i++){
                     for(int j=c; j<c+8; j++){
-                        System.out.print(j + " ");
+                        if((i+j)%2 == 0){
+                            if(chessBoard[i][j] != evenColor) 
+                                count++;
+                        }
+                        else{
+                            if(chessBoard[i][j] == evenColor) 
+                                count++;
+                        }
                     }
-                    System.out.println();
                 }
+                if(count < minCount)
+                    minCount=count;
             }
         }
+        System.out.println(minCount);
         sc.close();
     }
 }
